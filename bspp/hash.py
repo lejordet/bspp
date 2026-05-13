@@ -1,11 +1,11 @@
-import hashlib
+from Crypto.Hash import MD4
 import struct
 from typing import List
 from zipfile import ZipFile, ZipInfo
 
 
 def pk3_hash_info(inf_list: List[ZipInfo]) -> bytes:
-    md4 = hashlib.new("md4")
+    md4 = MD4.new()
     for info in inf_list:
         if info.file_size > 0:
             md4.update(struct.pack("<I", info.CRC))
@@ -32,7 +32,7 @@ def pk3_hash(file_name: str) -> bytes:
 
 
 def bsp_hash(b: bytes) -> bytes:
-    md4 = hashlib.new("md4")
+    md4 = MD4.new()
     md4.update(b)
     digest = md4.digest()
     # A553 4CD1
