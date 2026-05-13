@@ -21,3 +21,7 @@ classifiers = [
 ]
 description-file = "README.md"
 requires-python=">=3.11"
+requires = ["pycryptodome==3.23.0"]
+
+[tool.flit.metadata.requires-extra]
+dev = ["black==20.8b1", "flit>=3.0.0,<4", "pylint==2.6.0", "mypy==0.790"]

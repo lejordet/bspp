@@ -33,10 +33,11 @@ jobs:
         with:
           python-version: ${{matrix.python}}
 
+      - name: Install uv
+        run: pip install uv
+
       - name: Install
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements-dev.txt
+        run: uv pip install -e ".[dev]"
       - name: Test
         run: make test
       - name: Lint
