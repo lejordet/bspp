@@ -43,4 +43,4 @@ jobs:
       - name: Lint
         run: |
           uv run ruff check bspp tests
-          uv run ty scheck bspp tests
+          uv run ty check bspp tests
