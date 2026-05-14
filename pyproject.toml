@@ -12,7 +12,7 @@ indent-style = "space"
 
 [project]
 name = "bspp"
-version = "1.0.2"
+version = "1.0.3"
 dependencies = ["pycryptodome==3.23.0"]
 module = "bspp"
 author = "Zsolt Mészárovics"

@@ -255,24 +255,22 @@ equires_ta=False))]
 Development
 -----------
 
-This project prefers [Pipenv][pipenv].
+Fork by lejordet, to modernize for Python 3.14.
+This updated project prefers uv.
 
 In order to install development dependencies prepare dev env with:
 
 ```bash
-$ pipenv sync -d
+$ uv venv
+$ uv pip install -e .[dev]
 ```
 
 Before pushing, please check code quality and formatting:
 
 ```bash
-$ make lint
+$ uv run ruff check
+$ uv run ty check
 ```
-
-Understanding pylint [errors][pylint-errors].
-
-[pylint-errors]: https://pylint.readthedocs.io/en/latest/technical_reference/features.html
-[pipenv]: https://pipenv.pypa.io/
 
 Test-maps
 ---------
