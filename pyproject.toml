@@ -31,3 +31,6 @@ requires-python=">=3.14"
 
 [project.optional-dependencies]
 dev = ["ruff==0.15.13", "ty==0.0.36", "flit==3.12.0"]
+
+[tool.uv]
+exclude-newer = "7d"
